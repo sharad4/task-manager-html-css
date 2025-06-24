@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Task Manager Pro</h1>
+            <p>Organize your life, one task at a time</p>
+        </div>
+        <div class="stats">
+            <div class="stat-card">
+                <span class="number" id="total-tasks">0</span>
+                <span>Total Tasks</span>
+            </div>
+            <div class="stat-card">
+                <span class="number" id="completed-tasks">0</span>
+                <span>Completed</span>
+            </div>
+            <div class="stat-card">
+                <span class="number" id="pending-tasks">0</span>
+                <span>Pending</span>
+            </div>
+            <div class="stat-card">
+                <span class="number" id="overdue-tasks">0</span>
+                <span>Overdue</span>
+            </div>
+        </div>
+        <div class="task-input-section">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" name="" id="task-title" placeholder="Enter your task..." maxlength="100">
+                </div>
+                <div class="input-group">
+                    <label for="task-category">Category</label>
+                    <select name="" id="task-category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="shopping">Shopping</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="task-priority">Priority</label>
+                    <select name="" id="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="task-due-date">Due Date</label>
+                    <input type="date" name="" id="task-due-date">
+                </div>
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="task-description">Description (Optional)</label>
+                    <input type="text" name="" id="task-description" placeholder="Add more details..." maxlength="200">
+                </div>
+                <div class="iput-group" style="display: flex; align-items: end;">
+                    <button class="add-btn">
+                        ➕ Add Task
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active">All Tasks</button>
+            <button class="filter-btn">Pending</button>
+            <button class="filter-btn">Completed</button>
+            <button class="filter-btn">Personal</button>
+            <button class="filter-btn">Shopping</button>
+            <input type="text" name="" id="" class="search-box" placeholder="🔍 Search tasks...">
+        </div>
+        <div class="tasks-container" id="tasks-container">
+            <div class="empty-state" id="empty-state">
+                <div style="font-size: 4em; margin-bottom: 20px;">📝</div>
+                <h3>No tasks yet!</h3>
+                <p>Add your task above to get started.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div id="edit-mmodal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: #333;">Edit Task</h2>
+            <div class="input-group">
+                <label for="edit-task-title">Task Title</label>
+                <input type="text" name="" id="edit-task-title" maxlength="100">
+            </div>
+            <div class="input-row" style="margin-top: 15px;">
+                <div class="input-group">
+                    <label for="edit-task-category">Category</label>
+                    <select name="" id="edit-task-category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="shopping">Shopping</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="edit-task-priority">Priority</label>
+                    <select name="" id="edit-task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">high</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group" style="margin-top: 15px;">
+                <label for="edit-task-due-date">Due Date</label>
+                <input type="date" name="" id="edit-task-due-date">
+            </div>
+            <div class="input-group" style="margin-top: 15px;">
+                <label for="edit-task-description">Description</label>
+                <input type="text" name="" id="edit-task-description" maxlength="200">
+            </div>
+            <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: flex-end;">
+                <button class="task-btn" style="background: #6c757d; color: white; padding: 12px 24px;">Cancel</button>
+                <button class="task-btn" style="background: #007bff; color: white; padding: 12px 24px;">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
