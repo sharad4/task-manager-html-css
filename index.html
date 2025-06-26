@@ -66,19 +66,20 @@
                     <input type="text" name="" id="task-description" placeholder="Add more details..." maxlength="200">
                 </div>
                 <div class="iput-group" style="display: flex; align-items: end;">
-                    <button class="add-btn">
+                    <button class="add-btn" onclick="addTask()">
                         ➕ Add Task
                     </button>
                 </div>
             </div>
         </div>
         <div class="filters">
-            <button class="filter-btn active">All Tasks</button>
-            <button class="filter-btn">Pending</button>
-            <button class="filter-btn">Completed</button>
-            <button class="filter-btn">Personal</button>
-            <button class="filter-btn">Shopping</button>
-            <input type="text" name="" id="" class="search-box" placeholder="🔍 Search tasks...">
+            <button class="filter-btn active" onclick="filterTasks('all', event)">All Tasks</button>
+            <button class="filter-btn" onclick="filterTasks('pending', event)">Pending</button>
+            <button class="filter-btn" onclick="filterTasks('completed', event)">Completed</button>
+            <button class="filter-btn" onclick="filterTasks('work', event)">Work</button>
+            <button class="filter-btn" onclick="filterTasks('personal', event)">Personal</button>
+            <button class="filter-btn" onclick="filterTasks('shopping', event)">Shopping</button>
+            <input type="text" name="" id="" class="search-box" placeholder="🔍 Search tasks..." oninput="searchTasks(this.value)">
         </div>
         <div class="tasks-container" id="tasks-container">
             <div class="empty-state" id="empty-state">
@@ -92,7 +93,7 @@
     <!-- Edit Task Modal -->
     <div id="edit-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
             <h2 style="margin-bottom: 20px; color: #333;">Edit Task</h2>
             <div class="input-group">
                 <label for="edit-task-title">Task Title</label>
@@ -125,8 +126,8 @@
                 <input type="text" name="" id="edit-task-description" maxlength="200">
             </div>
             <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: flex-end;">
-                <button class="task-btn" style="background: #6c757d; color: white; padding: 12px 24px;">Cancel</button>
-                <button class="task-btn" style="background: #007bff; color: white; padding: 12px 24px;">Save Changes</button>
+                <button class="task-btn" style="background: #6c757d; color: white; padding: 12px 24px;" onclick="closeEditModal()">Cancel</button>
+                <button class="task-btn" style="background: #007bff; color: white; padding: 12px 24px;" onclick="saveEditedTask()">Save Changes</button>
             </div>
         </div>
     </div>
