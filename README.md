@@ -20,8 +20,8 @@
 
 # 📂 Project Structure
 
-- task-manager-pro/
-  ├── index.html # Main HTML page
-  ├── style.css # Custom styles
-  ├── script.js # All JavaScript logic
-  └── README.md # This documentation
+task-manager-pro/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
