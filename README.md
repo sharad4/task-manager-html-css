@@ -21,7 +21,6 @@
 # 📂 Project Structure
 
 - task-manager-pro/
-  │
   ├── index.html # Main HTML page
   ├── style.css # Custom styles
   ├── script.js # All JavaScript logic
