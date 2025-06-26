@@ -18,10 +18,10 @@
 - CSS3 – Custom styling and layout
 - Vanilla JavaScript – Logic, DOM manipulation, and event handling
 
-# 📂 Project Structure
+<!-- # 📂 Project Structure
 
 task-manager-pro/
 ├── index.html
 ├── style.css
 ├── script.js
-└── README.md
+└── README.md -->
